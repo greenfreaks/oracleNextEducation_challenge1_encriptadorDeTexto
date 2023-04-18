@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,32 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <section class="contenedor">
+        <img src="img/logo.png" alt="logo" class="contenedor__logo">
+        <div class="aplicacion">
+            <div class="aplicacion__ingresarTexto">
+                <div class="aplicacion__ingresarTexto--input"></div>
+                <div class="aplicacion__ingresarTexto--botones">
+                    <p><span><img src="img/advertencia.png" alt="Signo de advertencia"></span>Sólo letras minúsculas y sin acentos</p>
+                </div> 
+            </div>
+            <div class="aplicacion__revelarTexto">
+                <div class="aplicacion__revelarTexto--sinTexto">
+                    <img src="img/muñeco.png" alt="Imágen de muñeco">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <h3>Ingresa el texto que desees encriptar o desencriptar.</h3>
+                </div>
+                <div class="aplicacion__revelarTexto--conTexto">
+                    <p></p>
+                    <button>Copiar</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
     <script src="app.js"></script>
 </body>
+
 </html>
