@@ -10,29 +10,28 @@
 </head>
 
 <body>
-    <section class="contenedor">
-        <img src="img/logo.png" alt="logo" class="contenedor__logo">
-        <div class="aplicacion">
-            <div class="aplicacion__ingresarTexto">
-                <div class="aplicacion__ingresarTexto--input"></div>
-                <div class="aplicacion__ingresarTexto--botones">
-                    <p><span><img src="img/advertencia.png" alt="Signo de advertencia"></span>Sólo letras minúsculas y sin acentos</p>
-                </div> 
+    <header>
+        <img class="logo" src="img/logo.png" alt="Logo de Alura" />
+    </header>
+    <main>
+        <section>
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <h6 class="informacion">Sólo letras minúsculas y sin acentos</h6>
             </div>
-            <div class="aplicacion__revelarTexto">
-                <div class="aplicacion__revelarTexto--sinTexto">
-                    <img src="img/muñeco.png" alt="Imágen de muñeco">
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <h3>Ingresa el texto que desees encriptar o desencriptar.</h3>
-                </div>
-                <div class="aplicacion__revelarTexto--conTexto">
-                    <p></p>
-                    <button>Copiar</button>
-                </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="BtnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="BtnDesencriptar()">Desencriptar</button>
             </div>
-        </div>
-        
-    </section>
+        </section>
+        <section>
+            <textarea class="mensaje" cols="20" rows="10"></textarea>
+            <div class="">
+                <button class="btn-copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+
     <script src="app.js"></script>
 </body>
 
