@@ -1,5 +1,7 @@
 const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
+const copiar = document.querySelector(".btn-copiar");
+const textoCopiado = document.querySelector(".textoCopiado");
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -18,8 +20,18 @@ function BtnDesencriptar() {
     const textoEncriptado = Desencriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
-    
+
 }
+
+function Copiar() {
+    mensaje.focus();
+    document.execCommand("selectAll"); //Selecciona todo el texto en el que el focus se encuentre
+    document.execCommand("copy"); //copia todo lo que está seleccionado
+    textoCopiado.style.display = "block";
+    setTimeout(()=>textoCopiado.style.display = "none", 4000 )
+
+}
+
 
 
 

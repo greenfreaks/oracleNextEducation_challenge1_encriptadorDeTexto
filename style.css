@@ -48,6 +48,14 @@ main{
 .mensaje:focus{
     outline: none;
 }
+/* Al copiar el mensaje, ya no se verá la selección de color azul, porque ahora esa selección es transparente */
+.mensaje::-moz-selection{
+    background-color: transparent;
+}
+
+.mensaje::selection{
+    background-color: transparent;
+}
 
 .botones{
     display: flex;
@@ -85,6 +93,9 @@ main{
     margin-top: 402px;
     position: absolute;
     width: 336px;
+}
+.textoCopiado{
+    display: none;
 }
 
 .informacion{
