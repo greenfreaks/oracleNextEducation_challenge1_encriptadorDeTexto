@@ -14,23 +14,23 @@
         <img class="logo" src="img/logo.png" alt="Logo de Alura" />
     </header>
     <main>
-        <section>
+        <section class="encriptar">
             <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             <div>
                 <h6 class="informacion">Sólo letras minúsculas y sin acentos</h6>
             </div>
             <div class="botones">
-                <button class="btn-encriptar" onclick="BtnEncriptar()">Encriptar</button>
-                <button class="btn-desencriptar" onclick="BtnDesencriptar()">Desencriptar</button>
+                <button class="btn btn-encriptar" onclick="BtnEncriptar()">Encriptar</button>
+                <button class="btn btn-desencriptar" onclick="BtnDesencriptar()">Desencriptar</button>
             </div>
         </section>
-        <section>
+        <section class="desencriptar">
             <textarea class="mensaje" cols="20" rows="10"></textarea>
             <div class="">
-                <button class="btn-copiar" onclick="Copiar()">Copiar</button>
+                <button class="btn btn-copiar" onclick="Copiar()">Copiar</button>
+                <span class="textoCopiado">Texto copiado</span>
             </div>
         </section>
-        <span class="textoCopiado">Texto copiado</span>
     </main>
 
     <script src="app.js"></script>

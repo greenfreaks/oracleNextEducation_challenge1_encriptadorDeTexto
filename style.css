@@ -1,5 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-*{
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f5fc;
+    font-size: 24px;
+}
+/* .logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+} */
+textarea{
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+    background-color: transparent;
+}
+textarea:focus{
+    outline: none;
+}
+.btn{
+    padding: 20px;
+    width: 250px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 20px;
+    
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    font-size: 24px;
+    width: 70%;
+    margin: auto;
+    
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    color: white;
+}
+.btn-desencriptar{
+    background-color: #D8DFE8;
+    border: solid 1px #0A3871;
+    color: #0A3871;
+}
+.btn-copiar{
+    background-color: white;
+    border: solid 1px #0A3871;
+    color: #0A3871;
+}
+.textoCopiado{
+    display: none;
+}
+.informacion{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.encriptar{
+    width: 100%;    
+}
+.encriptar .botones{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.desencriptar{
+    padding: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+}
+.mensaje{
+    background-image: url("img/muñeco.png");
+    background-color: white;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+}
+
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +106,7 @@
     line-height: 150%;
 }
 
-.logo{
+.logo {
     padding-top: 10px;
     padding-left: 10px;
     height: 10%;
@@ -17,52 +114,59 @@
 
 }
 
-main{
+main {
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px;
 }
 
-.text-area{
+.text-area {
     border: none;
     color: #0A3871;
     margin-top: 90px;
     text-transform: lowercase;
 }
-::placeholder{color: #0A3871;}
-    .text-area:focus{
-        outline: none;
+
+::placeholder {
+    color: #0A3871;
 }
-.mensaje{
+
+.text-area:focus {
+    outline: none;
+}
+
+.mensaje {
     background-color: white;
     background-image: url("img/muñeco.png");
     background-repeat: no-repeat;
     border: none;
     border-radius: 24px;
     color: #0A3871;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
-    position: fixed;
 }
-.mensaje:focus{
+
+.mensaje:focus {
     outline: none;
-}
+} */
+
 /* Al copiar el mensaje, ya no se verá la selección de color azul, porque ahora esa selección es transparente */
-.mensaje::-moz-selection{
+/* .mensaje::-moz-selection {
     background-color: transparent;
 }
 
-.mensaje::selection{
+.mensaje::selection {
     background-color: transparent;
 }
 
-.botones{
+.botones {
     display: flex;
     margin-top: 18px;
 }
 
 .btn-desencriptar{
+    background-color: white;
+}
+.btn-desencriptar {
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -73,7 +177,7 @@ main{
     width: 328px;
 }
 
-.btn-encriptar{
+.btn-encriptar {
     background: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -83,22 +187,52 @@ main{
     width: 328px;
 }
 
-.btn-copiar{
+.btn-copiar {
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
     width: 336px;
 }
-.textoCopiado{
+
+.textoCopiado {
     display: none;
 }
 
-.informacion{
+.informacion {
     color: #495057;
     font-size: 18px;
+} */
+
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+        width: 90%;
+    }
+    .encriptar .botones{
+        justify-content: center;
+    }
+    .btn-encriptar{
+        margin-right: 20px;
+    }
+    .text-area{
+        margin-top: 800px;
+    }
+
+    .encriptar{
+        margin-bottom: 50px;
+    }
+
+    .desencriptar{
+        height: auto;
+    }
+
+    .mensaje{
+        background-image: url("img/ningunMensaje.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 650px;
+    }
+    
 }

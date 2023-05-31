@@ -9,6 +9,26 @@ const textoCopiado = document.querySelector(".textoCopiado");
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
+textArea.addEventListener("keypress", function(e){
+    if(!NoCaracteresEspeciales(e)){
+        e.preventDefault();
+    }
+});
+
+function NoCaracteresEspeciales(e) {
+    const char = String.fromCharCode(e.keyCode);
+    // console.log(e.keyCode);
+    // console.log(char);
+
+    const pattern = '[-a-zA-Z \s]';
+    if(char.match(pattern)){
+        console.log(char)
+        return true;
+    }else{
+        
+    }
+}
+
 function BtnEncriptar() {
     const textoEncriptado = Encriptar(textArea.value);
     mensaje.value = textoEncriptado;
@@ -28,7 +48,7 @@ function Copiar() {
     document.execCommand("selectAll"); //Selecciona todo el texto en el que el focus se encuentre
     document.execCommand("copy"); //copia todo lo que está seleccionado
     textoCopiado.style.display = "block";
-    setTimeout(()=>textoCopiado.style.display = "none", 4000 )
+    setTimeout(() => textoCopiado.style.display = "none", 4000)
 
 }
 
